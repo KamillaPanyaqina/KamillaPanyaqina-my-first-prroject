@@ -272,7 +272,7 @@ header button{
 }
 
 
-h1{
+.mainpage h1{
     animation: hscale 2s 1;
     text-transform: uppercase;
 }
@@ -289,6 +289,20 @@ h1{
         
     }
 }
+
+@keyframes hscaleMobile{
+    0%{
+        transform: scale(3) translateY(10px);
+        opacity: 0;
+    }
+    100%{
+        transform:scale(1) translateY(-50px);
+        opacity: 1;
+
+        
+    }
+}
+
 img{
     width: 120px;
     
@@ -348,10 +362,17 @@ img{
     }
 }
 
-@media screen and (max-width:1100px){
+@media screen and (max-width:768px){
     .store-card{
         width: 65%;
         margin: 13px;
+    }
+}
+@media screen and (max-width:376px){
+    .mainpage h1{
+        font-size: 35px;
+        transform: translateY(-50px);
+        animation: hscaleMobile 2s 1;
     }
 }
 
